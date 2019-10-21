@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use of jquery</title>
+</head>
+<body>
+    <h1 id="text">I m Fading IN/OUT</h1>
+    <button onclick="fade()" id="btn-1">ClickOnMe</button>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        //Fade in out
+        function fade()
+        {
+            $("#text").fadeToggle();        //$("#text") is selector which select html element by id/class || '$' is for telling jqery
+            }
+    </script>
+
+</body>
+</html>
