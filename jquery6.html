@@ -1,0 +1,48 @@
+<!-- Callback function is nothing : When We Doing effects in animation , When u want to do some functionality is done only after effect is done(Koi kaam karan jb vo effect poora hojaye) -->
+<!-- All the effect is having callback function -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use of jquery</title>
+    <style>
+        #ani{
+            width: 70px;
+            height: 40px;
+            margin: 5px;
+            position: absolute;
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn-1">Animate</button>       <!---no need of onclick()-->
+    <div id="ani"></div>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function (){          //When whole webpage will ready then only this will be activate to reduce the load of site
+          
+            $("#btn-1").click(function (){
+                $("#ani").animate({         //Animate func takes 3 args ||  First arg id css part which u want to change , Second is Time , Third is call back function
+                    left:"150px",
+                    opacity:".5",
+                    width:"100px",
+                    height:"80px"
+                },1000,function (){
+                    alert("Hello i m callback function i m called only after this effect is done");
+                });
+            })
+
+        })
+
+        
+    </script>
+
+</body>
+</html>

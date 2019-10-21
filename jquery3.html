@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use of jquery</title>
+</head>
+<body>
+    <h1 id="text">I m Fading IN/OUT</h1>
+    <button id="btn-1">ClickOnMe</button>       <!---no need of onclick()-->
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        //Different way to calling func on click submit btn
+        $(document).ready(function (){          //When whole webpage will ready then only this will be activate to reduce the load of site
+            
+            
+            $("#btn-1").dblclick(function (){      //dblclick is funtion for work when double click happen
+                {       
+                    $("#text").fadeToggle(100);        //$("#text") is selector which select html element by id/class || '$' is for telling jqery        
+
+                }
+            });
+
+            
+        })
+       
+
+        //Fade in out
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- Three simple, but useful, jQuery methods for DOM manipulation are:
+addClass() - Adds one or more classes to the selected elements || We CAn add More than 1 classes also
+removeClass() - Removes one or more classes from the selected elements
+toggleClass() - Toggles between adding/removing classes from the selected elements
+css() - Sets or returns the style attribute -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .New_class{
+                color: rgb(247, 6, 78);
+                border: 2px dotted red;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <button id="btn-1">Add_class</button>
+            <button id="btn-2">Remove_class</button>
+            <button id="btn-3">Toggle_class</button>
+
+            <br><br>
+        </center>
+        <center>
+            <div id="id1" class="frm" style="border: 2px solid blue;">
+                <p id="p1">Hello jquery</p>
+            </div>
+        </center>
+    
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        
+        <script>
+            $(document).ready(function() {
+
+                $("#btn-1").click(function(){
+                    $("#p1").addClass("New_class");
+                })
+                $("#btn-2").click(function(){
+                    $("#p1").removeClass();
+                })
+                $("#btn-3").click(function(){
+                    $("#p1").toggleClass("New_class");
+                })
+                
+            })
+
+            
+        </script>
+    </body>
+</html>

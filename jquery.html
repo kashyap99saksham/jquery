@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use of jquery</title>
+</head>
+<body>
+    <p>i m para</p>
+    <h1 id="text">I m Fading IN/OUT</h1>
+    <h1 id="text1">I m Fading IN/OUT</h1>
+    
+    <div>
+        <p>i m para</p>
+    </div>
+    <div>
+        <p>i m para</p>
+    </div>
+    
+    <h1 id="text2">I m Fading IN/OUT</h1>
+    <h1 id="text3">I m Fading IN/OUT</h1>
+    <h1 id="text4">I m Fading IN/OUT</h1>
+
+    <button onclick="fade()" id="btn-1">ClickOnMe</button>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        //Fade in out
+        function fade()
+        {       
+            // $("#text").fadeToggle(100);        //$("#text") is selector which select html element by id/class || '$' is for telling jqery
+            // $('#text,#text1').fadeToggle();  //Only Text and text1 fades
+            // $("p").fadeToggle();    //All p tags fade
+            // $("div>p").fadeToggle();     //That para fades which are inside in div tags
+            // $("p:first").fadeToggle();      //Only0 first para shade          
+            // $("h1:first").fadeToggle();      //Only first h1 shade
+            // $("p:even").fadeToggle();      //Only even no. of para shade            
+            $("p:odd").fadeToggle();      //Only odd no. of para shade            
+
+        }
+    </script>
+
+</body>
+</html>

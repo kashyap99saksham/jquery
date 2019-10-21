@@ -1,0 +1,46 @@
+<!-- Functions dicuss :- html(),css(),text(),attr()-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use of jquery</title>
+    <style>
+        h1{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="text" class="text1">I m Only <b>Some</b> Random Text</h1>
+    <button id="btn-1">Action</button>       <!---no need of onclick()-->
+    <button id="btn-2">Change_css</button>       <!---no need of onclick()-->
+   
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function (){          //When whole webpage will ready then only this will be activate to reduce the load of site
+                    
+            $("#btn-1").click(function(){
+                alert($("#text").html());           //Give ALl Tags In text                
+            })
+            $("#btn-1").click(function(){
+                alert($("#text").attr("class"));           //Give attributes value                 
+            })
+            $("#btn-1").click(function(){
+                alert($("#text").css("font-size"));           //Give any css value                 
+            })
+            $("#btn-2").click(function(){
+                alert($("#text").css("font-size","80px"));           //changing css value                 
+            })
+        })
+
+        
+    </script>
+
+</body>
+</html>

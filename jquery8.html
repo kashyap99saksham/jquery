@@ -1,0 +1,44 @@
+<!-- Chaining in animation: It is Doing multiple thing at a time -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use of jquery</title>
+    <style>
+        h1{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="text">I m Only Some Random Text</h1>
+    <button id="btn-1">Action</button>       <!---no need of onclick()-->
+   
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function (){          //When whole webpage will ready then only this will be activate to reduce the load of site
+            
+            
+            $("#btn-1").click(function (){
+                alert($("#text").text());     //Getting text From selector
+            })            
+
+
+            $("#btn-1").click(function (){
+                $("#text").text("I m Changed");      //Puting text in selector
+            })
+
+ 
+        })
+
+        
+    </script>
+
+</body>
+</html>

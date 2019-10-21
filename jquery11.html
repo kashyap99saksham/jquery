@@ -1,0 +1,75 @@
+<!-- Three simple, but useful, jQuery methods for DOM manipulation are:
+append() - Inserts content at the end of the selected elements
+prepend() - Inserts content at the beginning of the selected elements
+after() - Inserts content after the selected elements
+before() - Inserts content before the selected elements   
+remove() - Removes the selected element (and its child elements)
+empty() - Removes the child elements from the selected elements -->
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <center>
+            <button id="btn1">Append </button>
+            <button id="btn2">Prepend </button>
+            <button id="btn3">after </button>
+            <button id="btn4">before </button>
+
+            <button id="btn5">remove </button>
+            <button id="btn6">empty </button>
+            <button id="btn7">Remove_specific_para </button>
+            <br>
+            <br>
+            <br>
+        </center>
+        <center>
+            <div id="id1" class="frm" style="border: 2px solid blue;">
+                <p id="p1">Hello jquery</p>
+                <p>Hello jquery</p>
+                <p>Hello jquery</p>
+            </div>
+        </center>
+    
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        
+        <script>
+            $("document").ready(function() {
+                $("#btn1").click(function(){
+                    $("#id1").append("<h1>This is a paragraph after the text</h1");
+                });
+
+                $("#btn2").click(function(){
+                    $("#id1").prepend("<h1>This is a paragraph prepend the text</h1");
+                });
+
+                $("#btn3").click(function(){
+                    $("#id1").after("<h1>This is a paragraph after the text</h1");
+                });
+
+                $("#btn4").click(function(){
+                    $("#id1").before("<h1>This is a paragraph before the text</h1");
+                });
+
+                $("#btn5").click(function(){
+                    $("#id1").remove();
+                });
+
+                $("#btn6").click(function(){
+                    $("#id1").empty();
+                });
+                
+                //SomeThing More with remove function
+                $("#btn7").click(function(){
+                    $("p").remove("#p1");
+                });
+            })
+
+            
+        </script>
+    </body>
+</html>
